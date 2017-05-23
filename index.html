@@ -19,7 +19,9 @@
   <body>
     <canvas  width=900 height=1000 id="map">Loading</canvas>
     <script>
-      
+      var example = document.getElementById("example"),
+			    ctx     = example.getContext('2d');
+			ctx.fillRect(0, 0, example.width, example.height);
     </script>
   </body>
 </html>
