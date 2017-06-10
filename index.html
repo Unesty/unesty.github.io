@@ -19,26 +19,16 @@
   <body>
     <canvas  width=900 height=1000 id="map">Loading</canvas>
     <script>
-     var melkhg = document.getElementById("map"),
-	   ctx = map.getContext('2d');
-     ctx.fillRect(0, 0, map.width, map.height);
-     ctx.moveTo(0,0);
-     ctx.lineTo(10,10);
-	   var kok = 1;
-     var r = "ff";
-     var g = "ff";
-     var b = "ff";
-     while(kok==1)
-      { 
-      if(r=="ff")
-      {
-        r="0"
-      }
-      ctx.strokeStyle = '#',r,g,b;
-      ctx.stroke();
-      r++;
-      
-      }
+     var canvas = document.getElementById("map");
+    var context = canvas.getContext("2d");
+    var x = Math.floor(Math.random() * 100) + 1;
+    var y = Math.floor(Math.random() * 100) + 1;
+    var width = Math.floor(Math.random() * 300) + 1;
+    var height = Math.floor(Math.random() * 100) + 1;
+    var colors = ["green", "blue", "red", "pink", "yellow"]
+    var randomColor = colors[Math.floor((Math.random()) * colors.length)];
+    context.fillStyle = randomColor;
+    context.fillRect(x, y, width, height);
     </script>
   </body>
 </html>
