@@ -24,7 +24,20 @@
      ctx.fillRect(0, 0, map.width, map.height);
      ctx.moveTo(0,0);
      ctx.lineTo(10,10);
-     ctx.stroke();
+	   var kok = 1;
+     var r = "ff";
+     var g = "ff";
+     var b = "ff";
+     while(kok==1)
+      { 
+      if(r=="ff")
+      {
+        r="0"
+      }
+      ctx.strokeStyle = '#',r,g,b;
+      ctx.stroke();
+      r++;
+      }
     </script>
   </body>
 </html>
