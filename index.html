@@ -19,9 +19,12 @@
   <body>
     <canvas  width=900 height=1000 id="map">Loading</canvas>
     <script>
-      var example = document.getElementById("map"),
-	  ctx = map.getContext('2d');
-      ctx.fillRect(0, 0, map.width, map.height);
+     var melkhg = document.getElementById("map"),
+	   ctx = map.getContext('2d');
+     ctx.fillRect(0, 0, map.width, map.height);
+     ctx.moveTo(0,0);
+     ctx.lineTo(10,10);
+     ctx.stroke();
     </script>
   </body>
 </html>
