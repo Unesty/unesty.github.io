@@ -29,6 +29,12 @@
     var randomColor = colors[Math.floor((Math.random()) * colors.length)];
     context.fillStyle = randomColor;
     context.fillRect(x, y, width, height);
+    function showCoords(evt){
+     alert(
+     "clientX value: " + evt.clientX + "\n" +
+     "clientY value: " + evt.clientY + "\n"
+     );
+    }
     </script>
   </body>
 </html>
