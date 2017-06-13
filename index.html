@@ -29,12 +29,16 @@
     var randomColor = colors[Math.floor((Math.random()) * colors.length)];
     context.fillStyle = randomColor;
     context.fillRect(x, y, width, height);
-    function showCoords(evt){
-     alert(
-     "clientX value: " + evt.clientX + "\n" +
-     "clientY value: " + evt.clientY + "\n"
-     );
-    }
+    var repeat = true;
+    MouseEvent();
+    whil(repeat==true)
+      {
+       context.fillRect(MouseEvent.MovementX,MouseEvent.MovementY,10,10);
+       if(event.getModifierState("Esc") == true)
+       {
+         repeat=false;
+       }
+      }
     </script>
   </body>
 </html>
