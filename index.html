@@ -33,7 +33,7 @@
     MouseEvent();
     while(repeat==true)
       {
-       context.fillRect(MouseEvent.MovementX,MouseEvent.MovementY,10,10);
+       context.fillRect(MouseEvent.ClientX,MouseEvent.ClientY,10,10);
        if(event.getModifierState("Esc") == true)
        {
          repeat=false;
