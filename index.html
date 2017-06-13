@@ -32,13 +32,13 @@
     context.fillStyle = "black";
    
     var repeat = true;
-    MouseEvent();
+    var mevt = MouseEvent();
     context.fillRect(event.clientX,event.clientY,20,20);
     console.log("meow");
     while(repeat==true)
       {
-       console.log(MouseEvent.clientX + MouseEvent.clientY);
-       context.fillRect(MouseEvent.clientX,50,40,40);
+       console.log(mevt.clientX + mevt.clientY);
+       context.fillRect(evt.clientX,50,40,40);
        if(event.getModifierState("Esc") == true)
        {
          repeat=false;
