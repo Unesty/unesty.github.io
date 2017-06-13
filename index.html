@@ -33,7 +33,8 @@
     MouseEvent();
     while(repeat==true)
       {
-       context.fillRect(MouseEvent.ClientX,MouseEvent.ClientY,10,10);
+       console.log(MouseEvent.ClientX + MouseEvent.ClientY);
+       context.fillRect(MouseEvent.ClientX,MouseEvent.ClientY,40,40);
        if(event.getModifierState("Esc") == true)
        {
          repeat=false;
