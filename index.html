@@ -29,12 +29,14 @@
     var randomColor = colors[Math.floor((Math.random()) * colors.length)];
     context.fillStyle = randomColor;
     context.fillRect(x, y, width, height);
+    context.fillStyle = "black";
+    context.fillRect(event.clientX,event.clientY,20,20);
     var repeat = true;
     MouseEvent();
     while(repeat==true)
       {
-       console.log(MouseEvent.ClientX + MouseEvent.ClientY);
-       context.fillRect(MouseEvent.ClientX,MouseEvent.ClientY,40,40);
+       console.log(MouseEvent.clientX + MouseEvent.clientY);
+       context.fillRect(MouseEvent.clientX,MouseEvent.clientY,40,40);
        if(event.getModifierState("Esc") == true)
        {
          repeat=false;
