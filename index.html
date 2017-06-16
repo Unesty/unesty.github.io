@@ -16,4 +16,30 @@
       }
     </style>
   </head>
-  
+  <body>
+    <canvas id="myCanvas" width="1366" height="768"></canvas>
+    <script>
+      function writeMessage(canvas, xe, ye) {
+        var context = canvas.getContext('2d');
+        context.fillStyle = 'black';
+	context.fillRect(xe-20,ye-20,40,40);
+      }
+      function getMousePos(canvas, evt) {
+        var rect = canvas.getBoundingClientRect();
+        return {
+          x: evt.clientX - rect.left,
+          y: evt.clientY - rect.top
+        };
+      }
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      canvas.addEventListener('mousemove', function(evt) {
+        var mousePos = getMousePos(canvas, evt);
+	var xe = mousePos.x;
+	var ye = mousePos.y;
+        var lmb = evt.MouseButton;
+        writeMessage(canvas, xe, ye);
+      }, false);
+    </script>
+  </body>
+</html>
