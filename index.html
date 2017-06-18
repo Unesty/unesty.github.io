@@ -19,6 +19,16 @@
   <body>
     <canvas id="myCanvas" width="1366" height="768"></canvas>
     <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      if(canvas.webkitRequestFullScreen) {
+               canvas.webkitRequestFullScreen();
+           }
+          else {
+             canvas.mozRequestFullScreen();
+          }            
+      canvas.width  = window.innerWidth;
+      canvas.height = window.innerHeight;
       function writeMessage(canvas, xe, ye) {
         var context = canvas.getContext('2d');
         context.fillStyle = 'black';
@@ -31,8 +41,6 @@
           y: evt.clientY - rect.top
         };
       }
-      var canvas = document.getElementById('myCanvas');
-      var context = canvas.getContext('2d');
       canvas.addEventListener('mousemove', function(evt) {
         var mousePos = getMousePos(canvas, evt);
 	var xe = mousePos.x;
