@@ -21,14 +21,16 @@
     <script>
       var canvas = document.getElementById('myCanvas');
       var context = canvas.getContext('2d');
+       function fullscreen(){
       if(canvas.webkitRequestFullScreen) {
                canvas.webkitRequestFullScreen();
            }
           else {
              canvas.mozRequestFullScreen();
-          }            
+       }        }            
       canvas.width  = window.innerWidth;
       canvas.height = window.innerHeight;
+      
       function writeMessage(canvas, xe, ye) {
         var context = canvas.getContext('2d');
         context.fillStyle = 'black';
@@ -48,6 +50,7 @@
         var lmb = evt.MouseButton;
         writeMessage(canvas, xe, ye);
       }, false);
+	    canvas.addEventListener('click', fullscreen);
     </script>
   </body>
 </html>
