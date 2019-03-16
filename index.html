@@ -2,19 +2,8 @@
 <html>
   <head>
     <title>Unesty</title>
-    <meta charset="UTF-8">
     <link href="./nst.css" rel="stylesheet">
     <link href="icon.png" type="image/png" rel="icon">
-    <style>
-      h1{
-        color: #202020;
-        font-size: 25px;
-        font-family: Papyrus;
-      }
-      canvas{
-        font-size: 50px
-      }
-    </style>
   </head>
   <body>
     <canvas id="myCanvas" width="1366" height="768"></canvas>
@@ -22,12 +11,6 @@
       var canvas = document.getElementById('myCanvas');
       var context = canvas.getContext('2d');
        function fullscreen(){
-      if(canvas.webkitRequestFullScreen) {
-               canvas.webkitRequestFullScreen();
-           }
-          else {
-             canvas.mozRequestFullScreen();
-       }        }            
       canvas.width  = window.innerWidth;
       canvas.height = window.innerHeight;
       
@@ -50,7 +33,6 @@
         var lmb = evt.MouseButton;
         writeMessage(canvas, xe, ye);
       }, false);
-	    canvas.addEventListener('click', fullscreen);
     </script>
   </body>
 </html>
